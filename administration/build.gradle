@@ -1,0 +1,30 @@
+plugins {
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+}
+
+subprojects {
+
+    group 'wir.vs.virus.und.kunst'
+    version '0.0.1-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java-library'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'junit:junit:4.12'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.2.5.RELEASE")
+        }
+    }
+}
