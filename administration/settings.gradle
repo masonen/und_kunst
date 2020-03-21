@@ -3,5 +3,6 @@ rootProject.name = 'administration'
 include ':application'
 include ':domain'
 include ':infrastructure'
+include ':api'
 include ':springboot'
 
